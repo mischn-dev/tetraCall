@@ -2,7 +2,7 @@
 
 @show ARGS
 if ARGS == String[]
-    println(" No arguments specified \n first argument is the entire path to the file \n 2nd argument is the quality cut off value [0;999]")
+    println(" No arguments specified \n first and only argument is the entire path to the file including the filename, e.g. ~/Documents/Variants.vvcf")
 
 else
 
@@ -13,7 +13,7 @@ using CSV, DataFrames
 vcffile = ARGS[1]
 #vcffile = "/media/michael-uni/SSD_Work_Env/Nadja_test_SNPCalling/testFile.vcf"
 
-run(`vcftools --vcf $vcffile --out diploids --max-alleles 2 --min-alleles 2 --minQ 40 --maf 0.05 --extract-FORMAT-info AD`)
+run(`vcftools --vcf $vcffile --out diploids --max-alleles 2 --min-alleles 2 --extract-FORMAT-info AD`)
 
 #############################################################
 ## if the data is not too big
