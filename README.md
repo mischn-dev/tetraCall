@@ -19,6 +19,7 @@ Here comes the solution. We comvert the diplod calles to tetraploid information 
 
 2. you need to install `julia` and `vcftools`
     - `vcftools` needs to be added to the *path*, so that the script can access it
+        - download from here: http://vcftools.sourceforge.net/
         - if not attached to the *path*, please add the path to *line 16* of `diploid_TO_tetra.jl`
     - `julia` depends on the packages `CSV and DataFrames`, so please install these accordingly
         - install packages as shown below:
